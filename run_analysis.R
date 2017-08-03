@@ -54,7 +54,7 @@ names(subject_data) <- "subject"
 all_data <- cbind(x_data, y_data, subject_data)
 
 # Step 5
-# Create a second, independent tidy data set with the average of each variable
+# Create a second, independent tidy data set with the mean of each variable
 # for each activity and each subject
 
 mean_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
